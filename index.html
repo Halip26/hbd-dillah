@@ -5,30 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- meta data / SEO -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@halip26" />
-    <meta name="twitter:creator" content="@halip26" />
-    <meta name="twitter:title" content="Happy Birthday Dillah Dek" />
-    <meta
-      name="twitter:description"
-      content="Semoga di hari spesial ini Dillah selalu diberi kebahagiaan & kesehatan. Happy birthday dek!"
-    />
-    <meta
-      name="twitter:image"
-      content="http://halip26.github.io/hbd-dillah/img/dillah.jpg"
-    />
-    <meta name="twitter:url" content="http://halip26.github.io/hbd-Dillah" />
-    <meta property="og:title" content="Happy Birthday Dillah Dek" />
+    <meta name="description" content="Happy 25th Birthday Dillah! A special surprise made just for you." />
+    <meta name="keywords" content="Happy Birthday, Dillah, Surprise, Birthday Website" />
+    <meta name="author" content="@halip26" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Happy Birthday Dillah Dek" />
-    <meta
-      property="og:description"
-      content="Semoga di hari spesial ini Dillah selalu diberi kebahagiaan & kesehatan. Happy birthday dek!"
-    />
-    <meta
-      property="og:image"
-      content="http://halip26.github.io/hbd-dillah/img/dillah.jpg"
-    />
+    <meta property="og:url" content="https://halip26.github.io/hbd-dillah/" />
+    <meta property="og:title" content="Happy 25th Birthday Dillah! 🎉" />
+    <meta property="og:description" content="A special interactive birthday surprise made with love for Dillah." />
+    <meta property="og:image" content="https://halip26.github.io/hbd-dillah/img/preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://halip26.github.io/hbd-dillah/" />
+    <meta property="twitter:title" content="Happy 25th Birthday Dillah! 🎉" />
+    <meta property="twitter:description" content="A special interactive birthday surprise made with love for Dillah." />
+    <meta property="twitter:image" content="https://halip26.github.io/hbd-dillah/img/preview.png" />
+
     <!-- title & style.css  -->
     <title>HBD Dillah Dek</title>
     <link
@@ -40,7 +34,22 @@
   </head>
 
   <body>
-    <audio src=""></audio>
+    <audio class="song" loop autoplay>
+      <source src="./audio/perfect-hbd.mp3" />
+      <small>Your browser isn't invited for super fun audio time.</small>
+    </audio>
+
+    <div class="overlay" id="start-overlay">
+      <div class="overlay-content">
+        <h1>Assalamualaikum Dillah dek!</h1>
+        <p>
+          I have something special for you dek. cobaki klik tombol dibawah yaa
+          hehee
+        </p>
+        <button id="play-btn">Open Gift 🎁</button>
+      </div>
+    </div>
+
     <div class="container">
       <div class="one">
         <h1 class="one">
