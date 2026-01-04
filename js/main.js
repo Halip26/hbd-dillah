@@ -16,12 +16,6 @@ const fetchData = () => {
             ).innerText = data[customData];
           }
         }
-
-        // Periksa apakah iterasi sudah selesai
-        // Jalankan animasi jika sudah selesai
-        if (dataArr.length === dataArr.indexOf(customData) + 1) {
-          animationTimeline();
-        }
       });
     });
 };
@@ -309,6 +303,9 @@ const animationTimeline = () => {
       y: 30,
       zIndex: "-1",
     })
+    .to(".nine", 0.5, {
+      opacity: 1,
+    })
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
       ".last-smile",
@@ -320,7 +317,7 @@ const animationTimeline = () => {
     );
 
   tl.seek("currentStep");
-  tl.timeScale(2);
+  tl.timeScale(1.5);
 
   // Mulai Ulang Animasi jika diklik
   const replyBtn = document.getElementById("replay");
@@ -329,18 +326,24 @@ const animationTimeline = () => {
   });
 };
 
-// Jalankan fetch dan animasi secara berurutan
+// Initial Fetch
 fetchData();
 
-// tambahkan element audio pada index.html
+// Controller for Start Overlay and Audio
+const startBtn = document.getElementById("play-btn");
+const overlay = document.getElementById("start-overlay");
+const audio = document.querySelector(".song");
 
-// var source = "audio/birthday-male.mp3"
-// var audio = document.createElement("audio");
-// audio.autoplay = true;
-// audio.play();
+startBtn.addEventListener("click", () => {
+  // 1. Play Audio
+  audio.play();
 
-// audio.load()
-// audio.addEventListener("load", function() {
-//     audio.play();
-// }, true);
-// audio.src = source;
+  // 2. Hide Overlay with fade effect
+  overlay.style.opacity = "0";
+  setTimeout(() => {
+    overlay.style.visibility = "hidden";
+  }, 500);
+
+  // 3. Start Animation
+  animationTimeline();
+});
