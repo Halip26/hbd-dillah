@@ -1,56 +1,89 @@
-# 🎂 Happy Birthday Dillah Dek
+# 🎂 Interactive Birthday Surprise - Dillah's 25th Edition
 
-Pour your heart out with a magical, animated birthday greeting for someone who means the world
+A beautiful, interactive, and animated birthday greeting web application designed with soft pastel aesthetics and heartfelt messages.
 
-## 🌟 [View the Live Demo](http://halip26.github.io/hbd-dillah)
+## 🌟 [View the Live Demo](https://halip26.github.io/hbd-dillah/)
 
----
-
-## ✨ How It Works
-
-This project lets you send a personalized, animated birthday wish to anyone you care about. With just a few simple steps, you can create a unique web page that will make their day extra memorable.
-
-### Quick Start
-
-1. **Fork this repository**
-2. **Edit `customize.json`**  
-   Replace the sample content with your own messages and image links.
-3. **Enable GitHub Pages**  
-   Go to your repository’s Settings → Pages and publish your site.
-4. **Share the link**  
-   Send your custom birthday page to your loved one!
-
-> **No pull request needed!**  
-> Your page will work right from your own fork.
+![Birthday Preview](img/preview.png)
 
 ---
 
-## 🛠️ Customization
+## ✨ Key Features
 
-All text and images are managed through `customize.json` for easy editing—no need to touch the code.  
-Want even more control? Leave fields blank in the JSON and edit the HTML directly for advanced customization.
-
----
-
-## 💡 About
-
-This project was created in a hurry to make a birthday extra special. Now, it’s open for anyone to use and share the joy!  
-Built with plain HTML, CSS, JavaScript, and [GSAP](https://greensock.com/gsap) for smooth animations.
+- **Interactive Start:** A welcoming "Open Gift" overlay that ensures music starts playing only after user interaction (solving browser autoplay restrictions).
+- **Soft Pastel Aesthetic:** A custom-designed color palette (Lavender Blush, Soft Pink, Orchid, and Baby Blue) for a gentle and warm feel.
+- **GSAP Animations:** Smooth, professional-grade animations powered by GreenSock Animation Platform.
+- **WhatsApp Integration:** A dedicated section for the recipient to reply directly to your WhatsApp with a single click.
+- **Fully Responsive:** Optimized for all devices, from desktop to mobile.
+- **Custom SEO:** Optimized meta tags for beautiful sharing on social media like WhatsApp, Twitter, and Facebook.
 
 ---
 
-## 🤝 Contributing
+## 🛠️ How to Customize
 
-Have ideas to make this project better?  
-Feel free to open an issue, suggest a feature, or submit a pull request!
+This project is designed to be easily personalizable without deep coding knowledge.
+
+### 1. Edit `customize.json`
+
+Update this file to change the text, name, and image path:
+
+```json
+{
+  "greeting": "Hi 👋",
+  "name": "Dillah",
+  "greetingText": "Your humor & good vibes always brighten the day...",
+  "imagePath": "./img/dillah.jpg",
+  "wishHeading": "Happy 25th Birthday Dillah!",
+  ...
+}
+```
+
+### 2. Change the Music
+
+Replace the file in the `audio/` folder or update the source in `index.html`:
+
+```html
+<audio class="song" loop autoplay>
+    <source src="./audio/perfect-hbd.mp3"></source>
+</audio>
+```
+
+### 3. Update the Profile Picture
+
+Place the recipient's photo in the `img/` folder and update the `imagePath` in `customize.json`.
 
 ---
 
-## 📬 Need Help?
+## 🚀 Deployment
 
-- Email: [halipuddin.angko@gmail.com](mailto:halipuddin.angko@gmail.com)
-- Twitter: [@halip26](https://x.com/halip26)
+1. **Fork this repository** to your own GitHub account.
+2. **Customize your content** as described above.
+3. **Enable GitHub Pages**:
+   - Go to your repository **Settings**.
+   - Navigate to **Pages** on the left sidebar.
+   - Under **Build and deployment**, select the `main` branch and click **Save**.
+4. **Share the Joy!** Your site will be live at `https://yourusername.github.io/hbd-dillah/`.
+
+---
+
+## 💡 Built With
+
+- **HTML5 & CSS3**: Structured with semantic HTML and styled with modern CSS features (Flexbox, Keyframes).
+- **JavaScript (ES6+)**: Core logic and interactive elements.
+- **[GSAP](https://greensock.com/gsap)**: High-performance animations for a premium feel.
+- **Responsive Design**: Tailored experience for mobile and desktop users.
+
+---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## 📬 Contact & Feedback
+
+Made with 🤍 by [@Halip26](https://github.com/Halip26)
+
+- Email: [halipuddin.angko@gmail.com](mailto:halipuddin.angko@gmail.com)
+- Twitter/X: [@halip26](https://x.com/halip26)
